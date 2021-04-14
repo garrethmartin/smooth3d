@@ -269,9 +269,11 @@ def smooth_3d(
         for i in range(Qs[0].shape[0]):
             h_ld = h[i]
             if np.count_nonzero(~pick) > 0:
-                h_hd = binned_statistic_2d(x[~pick], y[~pick],
-                        quantity_sum[i][~pick], statistic='sum',
-                        bins=np.linspace(-extent, extent, hsize))[0]
+                h_hd = histogram2d(x[~pick], y[~pick],
+                                   weights=quantity_sum[i][~pick],
+                                   bins=int(extent * 2. / res) - 1,
+                                   range=[[-extent, extent], [-extent,
+                                   extent]])
                 h_ld[~np.isfinite(h_ld)] = 0.
                 h_hd[~np.isfinite(h_hd)] = 0.
                 img.append(gaussian_filter(h_ld + h_hd, sigma))
