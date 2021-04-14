@@ -135,7 +135,7 @@ def smooth_3d(
     quantity_sum=[False],
     quantity_average=[False],
     res=1.,
-    upper_threshold=100.,
+    upper_threshold=False,
     extent=False,
     lower_threshold=False,
     njobs=8,
