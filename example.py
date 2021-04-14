@@ -1,4 +1,4 @@
-import smooth_3d as s3d
+import smooth3d as s3d
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -13,7 +13,7 @@ imgs0 = s3d.bin_particles(X, flux, projection='yz', extent=120, res=0.5)
 imgs0_Z = s3d.bin_particles(X, Z, projection='yz', extent=120, res=0.5, statistic='mean')
 # binning with smoothing
 imgs, imgs_Z = s3d.smooth_3d(X, flux, Z, projection='yz', njobs=4, nsteps=250, k=5,
-                         n_resample=500, extent=120, res=0.5, upper_threshold=False)
+                         n_resample=500, extent=120, res=0.5)
 
 # plotting result
 fig, axs = plt.subplots(2,2,figsize=(8,8))
