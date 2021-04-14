@@ -11,9 +11,9 @@ Similar to the approach described in [Merritt+2020, Section 3.1](https://ui.adsa
 
 The basic method is as follows:
 
-1. Calculate the k-NN local number density in units of image element (i.e. pixel length^3) for every particle
-2. For every particle below the density threshold (3 particles per element by default), calculate the k-NN distance, $d$
-3. Split each of these particles into $N$ sub-particles with a 3D Gaussian distribution w/ mean equal to the original particle and $\sigma=d$
+1. Calculate the *k*-NN local number density in units of image element (i.e. pixel length$^{3}$) for every particle
+2. For every particle below the density threshold (3 particles per element by default), calculate the *k*-NN distance, *d*
+3. Split each of these particles into *N* sub-particles with a 3D Gaussian distribution w/ mean equal to the original particle and *$\sigma$=d*
 4. Bin particles
 
 Currently capable of smoothing sum and median values
