@@ -49,11 +49,11 @@ Similar to the approach described in [Merritt+2020, Section 3.1](https://ui.adsa
    
    **antialias**:    specifies whether the final image is antialiased
    
-*outputs*:
-    
-    **img**:         smoothed image for each summed quantity: shape = (Nquantities, Npixels, Npixels)
-    
-    **average_img**: smoothed image for each averaged quantity: shape = (Nquantities, Npixels, Npixels)
+ *outputs*:
+ 
+   **img**:         smoothed image for each summed quantity: shape = (Nquantities, Npixels, Npixels)
+   
+   **average_img**: smoothed image for each averaged quantity: shape = (Nquantities, Npixels, Npixels)
 
 ### Example script
 
