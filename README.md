@@ -16,7 +16,7 @@ The basic method is as follows:
 3. Split each of these particles into *N* sub-particles with a 3D Gaussian distribution with the mean equal to the original particle and *sigma=d*
 4. Bin the new particles
 
-Currently capable of smoothing sum and median values
+**Currently options for smoothing the sum and mean values**
 
 ![](example.png)
 
